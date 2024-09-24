@@ -1,0 +1,41 @@
+.feedback {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #D9D9D9;
+}
+
+.feedback h2 {
+    font-size: 50px;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.feedback p {
+    font-size: 28px;
+    font-style: italic;
+    margin-bottom: 40px;
+}
+
+.feedback-options {
+    display: flex;
+    justify-content: center;
+    gap: 300px;
+}
+
+.feedback-option {
+    text-align: center;
+    width: 400px;
+}
+
+.feedback-option img {
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.feedback-option p {
+    font-size: 30px;
+    font-style: italic;
+    margin: 5px 0;
+}

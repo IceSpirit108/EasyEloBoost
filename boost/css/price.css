@@ -1,0 +1,40 @@
+.prices {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: rgba(217, 217, 217, 0.5);
+}
+
+.prices h2 {
+    font-size: 50px;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.prices p {
+    font-size: 28px;
+    font-style: italic;
+    margin-bottom: 40px;
+}
+
+.price-options {
+    display: flex;
+    justify-content: center;
+    gap: 300px;
+}
+
+.price-option {
+    text-align: center;
+}
+
+.price-option img {
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.price-option p {
+    font-size: 30px;
+    font-style: italic;
+    margin: 5px 0;
+}

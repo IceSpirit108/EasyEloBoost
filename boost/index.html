@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap" rel="stylesheet">
+  <title>EasyEloBoost</title>
+
+  <link rel="stylesheet"  href="css/main.css">
+  <link rel="stylesheet"  href="css/header.css">
+  <link rel="stylesheet"  href="css/footer.css">
+  <link rel="stylesheet"  href="css/price.css">
+  <link rel="stylesheet"  href="css/feedback.css">
+  <link rel="stylesheet"  href="css/detailed.css">
+
+</head>
+
+
+<body>
+    <header>
+      <img src="img/logo2.png" alt="Логотип" class="logo">
+        <nav class="nav">
+            <ul>
+                <li id="chatLink" style="display: none;"><a href="#" class="modal-trigger" data-modal="chat">Чат</a></li>
+                <li><a href="#" class="modal-trigger" data-modal="buy">
+                Купить</a></li>
+                <li><a href="#" class="modal-trigger" data-modal="guarantees">
+                Гарантии</a></li>
+                <li><a href="#" class="modal-trigger" data-modal="faq">
+                FAQ</a></li>
+                <li id="authLink"><a href="#" class="modal-trigger" data-modal="auth">
+                Войти</a></li>
+                <li id="registerLink"><a href="#" class="modal-trigger" data-modal="register">Регистрация</a></li>
+                <li id="userLink" style="display: none;"><a href="#">Привет, <span id="usernameDisplay"></span></a></li>
+
+            </ul>
+        </nav>
+    
+    </header>
+
+    <main>
+      <section class="main__window">
+        <div class="main__text-block">
+          <div class="text__text-block">
+            <h1 class="title__text-block">
+              EasyEloBoost
+            </h1>
+            <span class="subtitle__text-block">
+              Буст эло в League of Legends<br>
+              Низкие цены, быстрый старт, гарантии
+            </span>
+          </div>
+          <button class="btn__text-block">
+            <span class="btn-txt__text-block">
+              Подробнее
+            </span>
+          </button>
+        </div>
+      </section>
+
+      <!-- Модальное окно -->
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+            <h2>Дополнительная информация</h2>
+            <p>При заказе наших услег вам предоставляется 2 выбора. В первом вы предоставляете доступ к вашему аккаунту, где наш игрок собственными силами будет поднимать ваш рейтинг. Во втором варианте вы можете заказать буст в пати с нашим игроком, но это будет стоить дороже, так как это усложняет буст. Все цены наших услуг отличаются в зависимости от вашего региона, ранга, скрытого ранга.</p>
+        </div>
+      </div>
+
+      <section class="prices">
+
+          <h2>Цены</h2>
+          <p>Здесь представлены наши цены на буст<br>
+          (Все цены зависят от ранга)</p>
+          <div class="price-options">
+              <div class="price-option">
+                <p>Буст на вашем аккаунте</p>
+                  <img src="img/rank.png" alt="Буст на вашем аккаунте">
+                <p>От 500 руб за 100 ЭЛО</p>
+              </div>
+              <div class="price-option">
+                <p>Буст с про игроком в пати</p>
+                   <img src="img/player.png" alt="Буст с про игроком в пати">    
+                <p>От 800 руб за 100 ЭЛО</p>
+               </div>
+          </div>
+      </section>
+
+      <section class="feedback">
+          <h2>Наши отзывы</h2>
+          <p>Здесь представлены наши цены на буст<br>
+          (Все цены зависят от ранга)</p>
+          <div class="feedback-options">
+              <div class="feedback-option">
+                  <img src="img/customer1.png" alt="Na3ib0ter">
+                  <p>Na3ib0ter</p>
+                  <p2>Заказал буст с про игроком. Забустил почти без поражений и даже давал советы по поводу моей игры
+                  </p2>
+              </div>
+              <div class="feedback-option">
+                   <img src="img/customer2.png" alt="Somple">
+                   <p>Somple</p>
+                   <p2>Круто! Посоветовал друзьям)))</p2>
+               </div>
+          </div>
+      </section>
+
+          <!-- Модальное окно для чата -->
+    <div id="chat" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Чат</h2>
+            <div id="chatContainer">
+                <input type="hidden" id="userId" value="">
+                <input type="text" id="messageInput" placeholder="Введите сообщение...">
+                <button id="sendMessageBtn">Отправить</button>
+                <div id="messageList"></div>
+            </div>
+        </div>
+    </div>
+
+
+          <!-- Модальное окно для покупки -->
+    <div id="buy" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Информация о покупке</h2>
+            <p>На данный момент сервис закрыт и заказы не доступны. Ожидайте открытие нашего сервиса! </p>
+        </div>
+    </div>
+
+        <!-- Модальное окно для гарантий -->
+    <div id="guarantees" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Информация о гарантиях</h2>
+            <p>Наша компания предоставляет гарантии на выполнение заказов. Мы гарантируем, что наш сотрудник выполнит заказ в указанное время, если только не возникнут технические проблемы. В случае неудачи мы возвращаем деньги.</p>
+        </div>
+    </div>
+
+
+        <!-- Модальное окно для FAQ -->
+    <div id="faq" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Частые вопросы</h2>
+            <ol>
+                <li>Что такое буст аккаунта?<br>
+                Поднятие вашего рейтинга с помощью наших сил</li>
+                <li>Как долго занимает процесс буста?<br>2 часа на 1 ранг в среднем</li>
+                <li>Какие способы оплаты вы принимаете?<br>
+                QIWI</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- Модальное окно для авторизации -->
+    <div id="auth" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Авторизация</h2>
+            <form id="loginForm">
+                <label for="loginUsername">Имя пользователя:</label>
+                <input type="text" id="loginUsername" name="username" required>
+                <br>
+                <label for="loginPassword">Пароль:</label>
+                <input type="password" id="loginPassword" name="password" required>
+                <br>
+                <button type="submit">Войти</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Модальное окно для регистрации -->
+    <div id="register" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Регистрация</h2>
+            <form id="registerForm">
+                <label for="registerUsername">Имя пользователя:</label>
+                <input type="text" id="registerUsername" name="username" required>
+                <br>
+                <label for="registerPassword">Пароль:</label>
+                <input type="password" id="registerPassword" name="password" required>
+                <br>
+                <label for="registerEmail">Email:</label>
+                <input type="email" id="registerEmail" name="email" required>
+                <br>
+                <button type="submit">Зарегистрироваться</button>
+            </form>
+        </div>
+    </div>
+
+
+
+
+
+    </main>
+
+    <footer>
+        <div class="contact">
+            <div class="contact-item">
+                <strong>Группа ВК</strong>
+                <a href="https://vk.com/easyeloboost" target="_blank">https://vk.com/easyeloboost</a>
+            </div>
+            <div class="contact-item">
+                <strong>Телеграмм</strong>
+                <a href="t.me/easyeloboost" target="_blank">t.me/easyeloboost</a>
+            </div>
+            <div class="contact-item">
+                <strong>Эл. почта</strong>
+                <a href="easyeloboost@gmail.com">easyeloboost@gmail.com</a>
+    </footer>
+
+
+
+ <script src="js/script.js"></script>
+ <script src="js/chat.js"></script> 
+ <script src="js/app.js"></script>   
+ <script src="js/detailed.js"></script> 
+
+
+</body>
+</html>
